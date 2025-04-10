@@ -1,11 +1,11 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'astro-erudite',
+  title: 'mitaka (dot) dev',
   description:
-    'astro-erudite is a opinionated, unstyled blogging template—built with Astro, Tailwind, and shadcn/ui.',
+    'personal website',
   href: 'https://astro-erudite.vercel.app',
-  author: 'jktrn',
+  author: 'haoyuan',
   locale: 'en-US',
   featuredPostCount: 2,
   postsPerPage: 3,
@@ -13,36 +13,44 @@ export const SITE: Site = {
 
 export const NAV_LINKS: SocialLink[] = [
   {
-    href: '/blog',
-    label: 'blog',
-  },
-  {
-    href: '/authors',
-    label: 'authors',
-  },
-  {
+    href:'/',
+    label: 'home',
+  }
+  ,{
     href: '/about',
     label: 'about',
   },
+  {
+    href: '/portfolio',
+    label: 'portfolio',
+  },
+  {
+    href: '/now',
+    label: 'now',
+  },{
+    href: '/blog',
+    label: 'blog',
+  },
+
+ 
+  
+  // {
+  //   href: '/authors',
+  //   label: 'authors',
+  // },
+ 
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://github.com/jktrn',
+    href: 'https://github.com/lohhaoyuan',
     label: 'GitHub',
   },
   {
-    href: 'https://twitter.com/enscry',
-    label: 'Twitter',
-  },
-  {
-    href: 'mailto:jason@enscribe.dev',
+    href: 'mailto:haoyuan@mitaka.dev',
     label: 'Email',
   },
-  {
-    href: '/rss.xml',
-    label: 'RSS',
-  },
+
 ]
 
 export const ICON_MAP: IconMap = {
@@ -50,6 +58,8 @@ export const ICON_MAP: IconMap = {
   GitHub: 'lucide:github',
   LinkedIn: 'lucide:linkedin',
   Twitter: 'lucide:twitter',
+  Instagram : 'lucide:instagram',
+
   Email: 'lucide:mail',
   RSS: 'lucide:rss',
 }

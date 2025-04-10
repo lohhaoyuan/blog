@@ -5,7 +5,12 @@ import PageHead from '@/components/PageHead.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
 import { getAllProjects } from '@/lib/data-utils'
+import AuthorCard from '@/components/AuthorCard.astro'
+import AvatarComponent from '@/components/ui/avatar'
 
+import { getAllAuthors } from '@/lib/data-utils'
+
+const authors = await getAllAuthors()
 const projects = await getAllProjects()
 ---
 
@@ -14,42 +19,58 @@ const projects = await getAllProjects()
   <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
 
   <section>
+
+        
+
     <div class="min-w-full">
+      
       <div class="prose mb-8">
         <p class="mb-4">
-          astro-erudite is an opinionated, unstyled static blogging template
-          that prioritizes simplicity and performance, built with <Link
-            href="https://astro.build"
+          i'm <Link
+            href="https://github.com/lohhaoyuan"
             class="text-foreground"
             external
-            underline>Astro</Link
-          >, <Link
-            href="https://tailwindcss.com"
+            underline>hao yuan</Link
+          >, a 4th year student at <Link
+            href="https://hci.edu.sg"
             class="text-foreground"
             external
-            underline>Tailwind</Link
-          >, and <Link
-            href="https://ui.shadcn.com"
+            underline> hwa chong institution, singapore &#x1f1f8;&#x1f1ec;</Link
+          >. i enjoy messing around with various different technologies in my free time, such as <Link
+            href="https://senrobo.github.io"
             class="text-foreground"
             external
-            underline>shadcn/ui</Link
-          >. It provides a clean foundation for your content while being
-          extremely easy to customize.
+            underline>building autonomous soccer robots</Link
+          >.
+          
         </p>
         <p>
-          To learn more about the philosophy behind this template, check out the
-          following blog post: <Link
-            href="/blog/the-state-of-static-blogs"
-            class="text-foreground"
-            underline>The State of Static Blogs in 2024</Link
-          >.
-        </p>
-      </div>
-
-      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
-      <div class="flex flex-col gap-4">
-        {projects.map((project) => <ProjectCard project={project} />)}
-      </div>
+          besides tech, i also have a vested interest in social issues and the systems behind them 
+          — how they function, fail, and affect lives. 
+          i’m constantly exploring how to apply my knowledge meaningfully to these challenges.
+          <p>
+            i'm also a massive weeb (i consider myself to have reached <em>otaku</em> levels). i spend my free time <Link href="https://fribbels.github.io/hsr-optimizer#showcase?id=800573789" class="text-foreground" external underline> grinding relics in hsr </Link> and watching anime. i'm particularly fond of <Link 
+              href="https://www.crunchyroll.com/series/GXJHM3P19/bocchi-the-rock"
+              class="text-foreground"
+              external
+              underline>bocchi the rock</Link> and <Link href="https://www.crunchyroll.com/series/GVDHX8QNW/chainsaw-man" class="text-foreground" external underline>chainsaw man</Link>.
+          </p>
+        </div>
+       
+        {
+          authors.length > 0 ? (
+            <ul class="flex flex-col gap-4 mb-3">
+              {authors.map((author) => (
+                <li>
+                  <AuthorCard author={author} />
+                </li>
+                
+              ))}
+            </ul>
+          ) : (
+            <p class="text-muted-foreground text-center">No authors found.</p>
+          )
+        }
     </div>
   </section>
 </Layout>

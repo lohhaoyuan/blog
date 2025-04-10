@@ -1,0 +1,54 @@
+---
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import { buttonVariants } from '@/components/ui/button'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+
+---
+
+<Layout>
+  <PageHead slot="head" title="now" />
+  <Breadcrumbs items={[{ label: 'now', icon: 'lucide:audio-lines' }]} />
+
+  <section>
+    <div class="rounded-lg border"></h2>
+      <div class="flex flex-col space-y-1.5 p-6">
+        <p class="text-foreground text-large">
+            <h3 class="text-xl font-medium">what i'm doing now</h3>
+            
+            <p class="text-muted-foreground mb-2 text-xs">last updated 09/04/2025</p>
+        </p>
+      </div>
+      <div class="p-6 pt-0">
+            <h4 class="text-lg font-medium">media intake</h4>
+            <ul>
+                <li><p class="text-muted-foreground mb-2 text-sm">
+                    <Link href="https://www.netflix.com/sg/title/81033445" external underline class="text-foreground">evangelion</Link> - a classic which i have never watched (until now)
+                  </p></li>
+                <li><p class="text-muted-foreground mb-2 text-sm">
+                    <Link href="https://open.spotify.com/artist/6nhHInOnQSWKRxntTHBH29?si=gORKLEMVRLuDDmTRkt1wIg" external underline class="text-foreground">futakuchi mana</Link> - metal cover artist for jpop
+                  </p></li>
+                <li><p class="text-muted-foreground mb-2 text-sm">
+                <Link href="https://www.goodreads.com/book/show/214331246-sunrise-on-the-reaping" external underline class="text-foreground">sunrise on the reaping, suzanne collins</Link> - i mean its a hunger games novel 
+                </p></li>
+            <br>
+            <h4 class="text-lg font-medium">work output</h4>
+            <p class="text-muted-foreground mb-2 text-sm">
+              <Link href="https://github.com/senrobo/kessoku-band" external underline class="text-foreground">robocup</Link> - i didn't finish programming my bot for comps so i'm doing it over the next few months and 
+              
+              posting my progress to keep myself accountable
+            </p>
+            <br>
+            <h4 class="text-lg font-medium">life updates</h4>
+            <ul>
+                <li><p class="text-muted-foreground mb-2 text-sm"><span class="text-foreground">catching up on my studies</span> - i'm striving to sweep all 7 subjects with a1s</p></li>
+                <li><p class="text-muted-foreground mb-2 text-sm"><span class="text-foreground">relearning webdev</span> - i haven't touched web since 2022, i'm pretty rusty</p></li>
+
+            </ul>
+      </div>
+    </div>
+  </section>
+  
+</Layout>

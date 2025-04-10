@@ -38,6 +38,15 @@ const { project } = Astro.props
       <h3 class="mb-1 text-lg font-medium">
         {project.data.name}
       </h3>
+      {
+        project.data.tags && (
+          <div class="flex flex-wrap gap-2 mb-1">
+            {project.data.tags.map((tag: string) => (
+              <Badge variant="secondary">{tag}</Badge>
+            ))}
+          </div>
+        )
+      }
       <p class="text-muted-foreground mb-2 text-sm">
         {project.data.description}
       </p>
@@ -56,15 +65,7 @@ const { project } = Astro.props
           </p>
         )
       }
-      {
-        project.data.tags && (
-          <div class="flex flex-wrap gap-2">
-            {project.data.tags.map((tag: string) => (
-              <Badge variant="secondary">{tag}</Badge>
-            ))}
-          </div>
-        )
-      }
+      
     </div>
   </Link>
 </div>
