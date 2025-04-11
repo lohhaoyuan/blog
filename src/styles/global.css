@@ -4,7 +4,7 @@
 
 @theme inline {
   --font-sans:
-    Switzer, Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    General Sans  , ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono:
     Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -35,6 +35,20 @@
   --color-ring: var(--ring);
 }
 
+@font-face{
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Variable.ttf') format('truetype') tech('variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype' tech('variations'));
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face{
   font-family: 'Switzer';
   src: url('/fonts/Switzer-Variable.ttf') format('truetype') tech('variations');
