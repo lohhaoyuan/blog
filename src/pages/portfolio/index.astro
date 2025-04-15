@@ -19,9 +19,6 @@ const projects = await getAllProjects()
   <Breadcrumbs items={[{ label: 'portfolio', icon: 'lucide:audio-waveform' }]} />
 
   <section>
-
-        
-
       <h2 class="mb-4 text-2xl font-medium">some of the stuff i've worked on</h2>
       <div class="flex flex-col gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}

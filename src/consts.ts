@@ -16,18 +16,19 @@ export const NAV_LINKS: SocialLink[] = [
     href:'/',
     label: 'home',
   }
+  // ,{
+  //   href: '/about',
+  //   label: 'about',
+  // },
+  // {
+  //   href: '/portfolio',
+  //   label: 'portfolio',
+  // },
+  // {
+  //   href: '/now',
+  //   label: 'now',
+  // }
   ,{
-    href: '/about',
-    label: 'about',
-  },
-  {
-    href: '/portfolio',
-    label: 'portfolio',
-  },
-  {
-    href: '/now',
-    label: 'now',
-  },{
     href: '/blog',
     label: 'blog',
   },
@@ -49,7 +50,14 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     href: 'mailto:haoyuan@mitaka.dev',
     label: 'Email',
+  },{
+    href:"https://instagram.com/haoyua.n",
+    label: 'Instagram',
   },
+  {
+    href:"/rss.xml",
+    label: 'RSS',
+  }
 
 ]
 
