@@ -21,7 +21,7 @@ import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  site: 'https://mitaka.vercel.app',
+  site: 'https://suou.vercel.app',
   integrations: [
     expressiveCode({
       themes: ['github-light', 'github-dark'],

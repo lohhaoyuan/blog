@@ -1,10 +1,10 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'mitaka (dot) dev',
+  title: 'suou (dot) dev',
   description:
     'collection of thoughts',
-  href: 'https://mitaka.vercel.app',
+  href: 'https://suou.vercel.app',
   author: 'haoyuan',
   locale: 'en-US',
   featuredPostCount: 2,
